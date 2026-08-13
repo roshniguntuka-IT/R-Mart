@@ -1,0 +1,840 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f8faf8;
+    color: #222;
+}
+
+.top-bar {
+    background: #087f32;
+    color: white;
+    padding: 8px 3%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.header {
+    background: white;
+    min-height: 90px;
+    padding: 15px 3%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.menu-btn {
+    border: none;
+    background: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.logo {
+    color: #087f32;
+    font-size: 27px;
+    white-space: nowrap;
+}
+
+.search-box {
+    display: flex;
+    flex: 1;
+    max-width: 650px;
+    margin: auto;
+}
+
+.search-box select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    background: white;
+    font-family: inherit;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    
+    outline: none;
+    font-family: inherit;
+}
+
+.search-box button {
+    padding: 12px 25px;
+    border: none;
+    background: #087f32;
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #056326;
+}
+
+.header-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-links a {
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.header-links span {
+    background: #087f32;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 10px;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 250px;
+    height: 100vh;
+    padding: 70px 20px 20px;
+    background: white;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    transition: left 0.3s ease;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+.side-menu a {
+    display: block;
+    padding: 15px 10px;
+    text-decoration: none;
+    color: #222;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 15px;
+}
+
+.side-menu a:hover {
+    color: #087f32;
+    background: #f3faf5;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    gap: 25px;
+    padding: 25px 3%;
+}
+
+.categories {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.categories h3 {
+    background: #087f32;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+}
+
+.categories a {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 18px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.categories a:hover {
+    color: #087f32;
+    background: #f2faf4;
+}
+
+.sale-banner {
+    height: 360px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    background: #eef7d8;
+}
+
+.sale-image {
+    position: absolute;
+    inset: 0;
+}
+
+.sale-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sale-banner > div:first-child {
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.sale-banner > div:first-child p:first-child {
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sale-banner h2 {
+    font-size: 40px;
+    margin: 8px 0;
+}
+
+.sale-banner h3 {
+    font-size: 35px;
+    color: #07852f;
+}
+
+.sale-banner > div:first-child p {
+    margin: 5px 0;
+}
+
+.sale-banner button {
+    margin-top: 18px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 7px;
+    background: #087f32;
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.sale-banner button:hover {
+    background: #056326;
+}
+
+.benefits {
+    margin-top: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.benefits div {
+    padding: 20px;
+    text-align: center;
+    border-right: 1px solid #eee;
+}
+
+.benefits div:last-child {
+    border-right: none;
+}
+
+.benefits strong {
+    display: block;
+    color: #222;
+    font-size: 14px;
+}
+
+.benefits p {
+    color: #777;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.products {
+    padding: 0 3% 30px;
+    background: #f8faf8;
+}
+
+.products-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    margin-bottom: 20px;
+}
+
+.products-title h2 {
+    font-size: 25px;
+    color: #222;
+}
+
+.products-title a {
+    color: #087f32;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: 280px repeat(4, 1fr);
+    gap: 15px;
+}
+
+.mega-sale {
+    min-height: 300px;
+    padding: 25px 18px;
+    border-radius: 12px;
+    background: #e7f4ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mega-sale h3 {
+    color: #087f32;
+    font-size: 17px;
+}
+
+.mega-sale h2 {
+    color: #087f32;
+    font-size: 25px;
+    margin: 10px 0 20px;
+}
+
+.mega-sale p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.mega-sale button {
+    width: fit-content;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #087f32;
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.mega-sale button:hover {
+    background: #056326;
+}
+
+.product-card {
+    background: white;
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    min-width: 0;
+    transition: 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    position: relative;
+    height: 230px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f8f8f8;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.wishlist {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: #777;
+    font-size: 21px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wishlist:hover {
+    color: red;
+}
+.wishlist.liked {
+    color: red;
+}
+
+.product-card h3 {
+    margin-top: 12px;
+    font-size: 15px;
+    color: #222;
+}
+
+.product-card p {
+    color: #777;
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.product-price strong {
+    font-size: 17px;
+    color: #222;
+}
+
+.product-price del {
+    font-size: 12px;
+    color: #888;
+}
+
+.product-price span {
+    margin-left: auto;
+    color: #087f32;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.product-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 10001;
+}
+
+.product-modal.active {
+    display: flex;
+}
+
+.product-modal-content {
+    width: 750px;
+    max-width: 100%;
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.modal-category {
+    color: #087f32;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.modal-details h2 {
+    margin: 8px 0;
+    font-size: 25px;
+}
+
+.modal-rating {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.modal-rating span {
+    color: #777;
+}
+
+.modal-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.modal-price strong {
+    font-size: 24px;
+}
+
+.modal-price del {
+    color: #888;
+}
+
+.modal-price span {
+    color: #087f32;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.modal-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.stock {
+    color: #087f32;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.modal-quantity {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.modal-quantity button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.modal-actions button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 7px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+.details-btn {
+    margin-top: 12px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: #087f32;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.details-btn:hover {
+    color: #056326;
+    text-decoration: underline;
+}
+
+.modal-cart {
+    border: none;
+    background: #087f32;
+    color: white;
+}
+
+.modal-cart:hover {
+    background: #056326;
+}
+
+.buy-now {
+    border: 1px solid #087f32;
+    background: white;
+    color: #087f32;
+}
+
+.buy-now:hover {
+    background: #f2faf4;
+}
+
+@media (max-width: 600px) {
+
+    .product-modal-content {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-image img {
+        height: 230px;
+    }
+}
+
+footer {
+    margin-top: 30px;
+    padding: 35px;
+    text-align: center;
+    background: #12351f;
+    color: white;
+}
+
+footer h2 {
+    color: #58c878;
+    margin-bottom: 8px;
+}
+
+footer p {
+    font-size: 13px;
+    color: #cbd8cf;
+    margin-top: 5px;
+}
+
+.login-box {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.login-box.active {
+    display: flex;
+}
+
+.login-form {
+    width: 380px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.login-form h2 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.login-form > p {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    outline: none;
+    font-family: inherit;
+    margin-bottom: 12px;
+}
+
+.login-form input:focus {
+    border-color: #087f32;
+}
+
+.login-submit {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    background: #087f32;
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-submit:hover {
+    background: #056326;
+}
+
+.login-divider {
+    text-align: center;
+    margin: 20px 0;
+    color: #999;
+    font-size: 12px;
+}
+
+.mobile-login,
+.google-login {
+    width: 100%;
+    padding: 12px;
+    border-radius: 7px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.mobile-login {
+    background: white;
+    color: #087f32;
+    border: 1px solid #087f32;
+}
+
+.google-login {
+    background: white;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.mobile-login:hover {
+    background: #f2faf4;
+}
+
+.google-login:hover {
+    background: #f7f7f7;
+}
+
+.login-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    font-size: 26px;
+    cursor: pointer;
+    color: #555;
+}
+
+#loginMessage {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+
+    .header-links {
+        display: none;
+    }
+
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .categories {
+        display: none;
+    }
+
+    .benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefits div:nth-child(2) {
+        border-right: none;
+    }
+
+    .sale-banner h2 {
+        font-size: 32px;
+    }
+
+    .sale-banner h3 {
+        font-size: 28px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .top-bar span:last-child {
+        display: none;
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .search-box {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    .sale-banner {
+        height: 300px;
+    }
+
+    .sale-banner > div:first-child {
+        left: 6%;
+    }
+
+    .sale-banner h2 {
+        font-size: 27px;
+    }
+
+    .sale-banner h3 {
+        font-size: 23px;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits div {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .main-layout {
+        padding: 15px;
+    }
+}
+
+
+
+
+
+

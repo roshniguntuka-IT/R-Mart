@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale="1.0>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="top-bar">
+            <span>Free delivery on orders above ₹499</span>
+            <span>Track Order  |  Help & Support</span>
+        </div>
+
+        <header class="header">
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <h1 class="logo">
+            🛒 R-Mart
+        </h1>
+
+        <div class="search-box">
+
+            <input type="text"  id="searchInput" placeholder="Search for products...">
+
+             <button id="searchBtn">Search</button>
+        </div>
+
+        <div class="header-links">
+          <a href="#" id="loginBtn">👤 Login / Signup</a>
+            <a href="#">♡ Wishlist <span>0</span></a>
+            <a href="#">🛒 Cart <span>0</span></a>
+        </div>
+
+    </header>
+         <aside class="side-menu" id="sideMenu">
+
+        <button class="close-btn" id="closeBtn">×</button>
+
+        <a href="#">🏠 Home</a>
+        <a href="#">🛍 Products</a>
+        <a href="#">♡ Wishlist</a>
+        <a href="#">🛒 Cart</a>
+        <a href="#">👤 Login / Signup</a>
+
+    </aside>
+          
+        <main class="main-layout">
+        <aside class="categories">
+
+            <h3>☰ &nbsp; Categories</h3>
+
+            <a href="#">📱 Electronics <span>›</span></a>
+            <a href="#">👕 Fashion <span>›</span></a>
+            <a href="#">🏠 Home & Kitchen <span>›</span></a>
+            <a href="#">💄 Beauty & Personal Care <span>›</span></a>
+            <a href="#">📚 Books & Stationery <span>›</span></a>
+            <a href="#">⚽ Sports & Outdoors <span>›</span></a>
+            <a href="#">🎮 Toys & Games <span>›</span></a>
+            <a href="#">🛒 Grocery <span>›</span></a>
+
+        </aside>
+
+        <div class="content">
+            
+            <section class="sale-banner">
+
+                <div>
+                    <p>BEST OFFERS</p>
+
+                    <h2>Summer Sale</h2>
+
+                    <h3>Up to 50% Off</h3>
+
+                    <p>Get amazing deals on top products</p>
+
+                    <button>Shop Now</button>
+                </div>
+
+                <div class="sale-image">
+                    <img src="images/green.png" alt="summer sale">
+                </div>
+
+            </section>
+         
+        <section class="benefits">
+            <div class="benefit">
+                <h3>🚚 Free Delivery</h3>
+             <p>On orders above ₹499</p>
+          </div>     
+        <div class="benefit">
+            <h3>↩️ Easy Returns</h3>
+            <p>Simple return process</p>
+         </div>
+
+        <div class="benefit">
+            <h3>🔒 Secure Payment</h3>
+            <p>100% secure checkout</p>
+        </div>
+
+        <div class="benefit">
+            <h3>⭐ Best Prices</h3>
+            <p>Quality at great prices</p>
+        </div>
+            </section>
+        </div>
+        </main> 
+        <section class="products"></section>
+
+    <div class="products-title">
+        <h2>Featured Products</h2>
+        <a href="#">View All</a>
+    </div>
+
+    <div class="product-container">
+
+        <div class="mega-sale">
+            <h3>Mega Sale</h3>
+            <h2>Up to 50% Off</h2>
+            <p>On Electronics & Accessories</p>
+            <button>Shop Now</button>
+        </div>
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=500" alt="Sport Smartwatch">
+
+                <button class="wishlist">♡</button>
+            </div>
+
+            <h3>Smart Watch</h3>
+            <p>Electronics</p>
+
+            <div class="rating">
+                 ⭐⭐⭐⭐⭐ <span>4.8</span>
+              </div>
+
+            <div class="product-price">
+                <strong>₹1,499</strong>
+                <del>₹2,499</del>
+                <span>40% OFF</span>
+            </div>
+         <button class="details-btn"
+                data-name="Smart Watch"
+                data-category="Electronics"
+                data-price="₹1,499"
+                data-old-price="₹2,499"
+                data-discount="40% OFF"
+                data-rating="4.8"
+                data-description="Smart watch with fitness tracking, heart-rate monitoring and a stylish design."
+                data-image="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=500" alt="Sport Smartwatch">
+     
+                View 
+         </button>
+        </div>
+
+        
+        <div class="product-card">
+
+            <div class="product-image">
+               <img src="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?w=500" alt="Mobile">
+                <button class="wishlist">♡</button>
+            </div>
+
+            <h3>Mobile</h3>
+            <p>Electronics</p>
+             <div class="rating">
+        ⭐⭐⭐⭐⭐ <span>4.6</span>
+    </div>
+            <div class="product-price">
+                <strong>₹15,000</strong>
+                <del>₹18,999</del>
+                <span>21% OFF</span>
+            </div>
+ <button class="details-btn"
+        data-name="Mobile"
+        data-category="Electronics"
+        data-price="₹15,000"
+        data-old-price="₹18,999"
+        data-discount="21% OFF"
+        data-rating="4.6"
+        data-description="Powerful smartphone with a modern design, high-quality display and reliable performance."
+        data-image="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?w=500">
+        View
+    </button>
+        </div>
+
+        <div class="product-card">
+
+            <div class="product-image">
+               <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500" alt="Steel Water Bottle">
+
+                <button class="wishlist">♡</button>
+            </div>
+
+            <h3>water bottle</h3>
+            <p>Home & Kitchen</p>
+              <div class="rating">
+        ⭐⭐⭐⭐⭐ <span>4.7</span>
+    </div>
+
+            <div class="product-price">
+                <strong>₹1,299</strong>
+                <del>₹2,299</del>
+                <span>43% OFF</span>
+            </div>
+ <button class="details-btn"
+        data-name="Water Bottle"
+        data-category="Home & Kitchen"
+        data-price="₹1,299"
+        data-old-price="₹2,299"
+        data-discount="43% OFF"
+        data-rating="4.7"
+        data-description="Premium stainless steel water bottle that keeps your drinks hot or cold for longer."
+        data-image="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500">
+        View
+    </button>
+        </div>
+
+        <div class="product-card">
+
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=500" alt="T-Shirt Pack">
+     alt="Classic T-Shirt">
+
+                <button class="wishlist">♡</button>
+            </div>
+
+            <h3>Classic T-Shirt</h3>
+            <p>Fashion</p>
+              <div class="rating">
+        ⭐⭐⭐⭐⭐ <span>4.5</span>
+              </div>
+            <div class="product-price">
+                <strong>₹699</strong>
+                <del>₹999</del>
+                <span>30% OFF</span>
+            </div>
+ <button class="details-btn"
+        data-name="Classic T-Shirt"
+        data-category="Fashion"
+        data-price="₹699"
+        data-old-price="₹999"
+        data-discount="30% OFF"
+        data-rating="4.5"
+        data-description="Comfortable classic cotton T-shirt with a simple and stylish design, suitable for everyday wear."
+        data-image="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=500">
+        View
+    </button>
+        </div>
+
+    </div>
+
+</section>
+         <footer>
+
+        <h2>🛒 Shopping Mart</h2>
+     <p>Your one-stop shop for everything you need.</p>
+        <p>© 2026 Shopping Mart. All rights reserved.</p>
+
+    </footer>    
+    <div class="login-box" id="loginBox">
+
+    <div class="login-form">
+
+        <button class="login-close" id="loginClose">×</button>
+
+        <h2>Login or Signup</h2>
+
+        <p>
+            Register now and get <b>2000 Shopora reward points</b> instantly!
+        </p>
+
+        <input
+            type="tel"
+            id="mobileNumber"
+            placeholder="Mobile Number"
+            maxlength="10"
+        >
+
+        <button class="login-submit" id="sendOtp">
+            Send OTP
+        </button>
+
+        <div class="login-divider">
+            <span>Or sign in using</span>
+        </div>
+
+        <button class="mobile-login">
+            Sign in with Mobile / Email
+        </button>
+
+        <button class="google-login">
+            Continue with Google
+        </button>
+
+        <p id="loginMessage"></p>
+
+    </div>
+    </div>
+    <div class="product-modal" id="productModal">
+
+    <div class="product-modal-content">
+
+        <button class="modal-close" id="modalClose">×</button>
+
+        <div class="modal-image">
+            <img id="modalImage" src="" alt="Product">
+        </div>
+
+        <div class="modal-details">
+
+            <p class="modal-category" id="modalCategory"></p>
+
+            <h2 id="modalName"></h2>
+
+            <div class="modal-rating">
+                ⭐⭐⭐⭐⭐ <span id="modalRating"></span>
+            </div>
+
+            <div class="modal-price">
+                <strong id="modalPrice"></strong>
+                <del id="modalOldPrice"></del>
+                <span id="modalDiscount"></span>
+            </div>
+
+            <p class="modal-description" id="modalDescription"></p>
+
+            <p class="stock">✓ In Stock</p>
+
+            <div class="modal-quantity">
+                <button id="modalMinus">−</button>
+                <span id="modalQuantity">1</span>
+                <button id="modalPlus">+</button>
+            </div>
+            <div class="modal-actions">
+
+    <button class="modal-cart" id="modalCart">
+        🛒 Add to Cart
+    </button>
+
+    <button class="buy-now" id="buyNow">
+        ⚡ Buy Now
+    </button>
+
+</div>
+
+</div>    
+</div>
+</div>
+<script src="script.js"></script>
+    </body>
+</html>
